@@ -1,0 +1,35 @@
+## Linux
+
+Run the following one-line command to download and run the installer.
+
+```
+wget -O /opt/stackbeat-linux-installer.sh https://stackbeat.tech/download/stackbeat-linux-installer.sh && bash /opt/stackbeat-linux-installer.sh
+```
+
+### Configuration
+
+Adjusting settings at this stage is optional. The default settings will function for initial setup and testing purposes. You can always adjust the settings later.
+
+If you would like to adjust them now, view `/opt/stackbeat/config.ini` and set as appropriate for your needs.
+
+### Running the services
+
+Start the `main` service on the main monitoring server:
+
+```
+stackbeat main
+```
+
+Start the `monitor` service on all systems you want monitored and reporting back to the main.
+
+```
+stackbeat monitor
+```
+
+The `main` service has a thread for self-monitoring. It will collect and report its own stats into memory and report the hostname as main. You will not need to run an additional `monitor` service if you want the `main` monitored. If you **do not** want `main monitored`, you can disable `Main Self Monitoring` in `config.ini`.
+
+
+
+## Windows
+
+Instructions TBD.
