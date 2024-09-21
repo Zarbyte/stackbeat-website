@@ -1,0 +1,46 @@
+## Summary
+
+SB has an internal REST API that allows LVUI to interact with the monitoring system. This API is fully exposed for your own use. All API endpooints are documented in this section.
+
+This feature allows you to create your own interface. LVUI works great out of the box, but we realize our own vision is not for everyone. That is why we have enabled you to create your own.
+
+## Endpoints
+
+### Real-Time Stats
+
+Load the latest real-time stats for all monitors.
+
+#### Request
+`GET /api/stats`
+
+`curl -X GET http://localhost:9999/api/stats`
+
+#### Parameters
+| Name | Type |
+| --- | --- |
+| id | integer |
+| hostname | string |
+| cpuUsage | double (percentage) |
+| memoryUsage | double (percentage) |
+| datetime | string |
+| os_name | string |
+| os_type | string |
+
+#### Response
+```json
+{
+    "data": [
+        {
+            "cpuUsage": 0.0,
+            "datetime": "2024-09-08 16:50:16",
+            "hostname": "master",
+            "id": 1,
+            "memoryUsage": 24.75,
+            "os_name": "Linux 5.14.0-427.22.1.el9_4.x86_64",
+            "os_type": "linux"
+        }
+    ],
+    "error": false,
+    "message": "Stats retrieved successfully"
+}
+```

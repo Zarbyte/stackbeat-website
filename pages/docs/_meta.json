@@ -2,13 +2,13 @@
     "index": {
         "title": "1. Introduction"
     },
-    "starter-guide": {
+    "2.-starter-guide": {
         "title": "2. Starter Guide"
     },
-    "lavishui": {
+    "3.-lavish-ui": {
         "title": "3. Lavish UI"
     },
-    "api": {
+    "4.-api": {
         "title": "4. API"
     }
 }
