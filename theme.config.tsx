@@ -1,5 +1,5 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from 'react';
+import { DocsThemeConfig } from 'nextra-theme-docs';
 
 const config: DocsThemeConfig = {
   logo: <span>StackBeat</span>,
@@ -15,9 +15,10 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: 'https://github.com/Zarbyte/stackbeat-website/tree/main',
   useNextSeoProps() {
     return {
-      titleTemplate: '%s | StackBeat'
-    }
-  },
+      titleTemplate: '%s | StackBeat',
+      description: 'The Beat of Your Stack. Service monitoring tool by Zarbyte.',
+    };
+  }
 }
 
-export default config
+export default config;
