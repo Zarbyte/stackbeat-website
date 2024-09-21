@@ -2,16 +2,21 @@ import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
+  logo: <span>StackBeat</span>,
   project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+    link: "https://github.com/Zarbyte/stackbeat-website"
   },
   chat: {
-    link: 'https://discord.com',
+    link: 'https://discord.gg/zFTM5YFrkF',
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'StackBeat by Zarbyte',
+  },
+  docsRepositoryBase: 'https://github.com/Zarbyte/stackbeat-website/tree/main',
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s | StackBeat'
+    }
   },
 }
 
